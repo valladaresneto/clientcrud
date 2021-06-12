@@ -1,0 +1,43 @@
+POST http://localhost:3080/api/v1/login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "password"
+}
+
+###
+
+GET http://localhost:3080/api/v1/clients/swagger-ui/
+
+###
+
+GET http://localhost:3080/api/v1/clients?page=0&size=2&sort=name&id=5
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyMzQ2MTA0OX0.zA9Dpthk27ctaAzzdWNYvRHDccw1i08qNFmtjD7hsv0dQlunLN7oCuXI674Lv4f59DS_QD46JEPgABd-W09KfA
+
+###
+
+POST http://localhost:3080/api/v1/clients
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyMzQ3MjM1Nn0.OXVbGrPAffiD0Hcz0a1K3O76NSONF6x_2zey10YpGjKdk3UbNA__R1Dx5VwJU_FZrVpSK2KSnRfvsw82i6P18Q
+
+{
+  "name": "Ana"
+}
+
+###
+
+PUT http://localhost:3080/api/v1/clients
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Maria Carolina",
+  "age": 35
+}
+

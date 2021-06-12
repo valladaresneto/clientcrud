@@ -1,0 +1,32 @@
+version: '3.5'
+services:
+    db:
+        image: 'postgres:13.1-alpine'
+        container_name: db
+        ports:
+            - 5432:5432
+        environment:
+            POSTGRES_USER: ${POSTGRES_USER:-postgres}
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-QEtu!@34}
+            POSTGRES_DB: client-db
+        networks:
+            - client-service-network
+        volumes:
+            - ./postgresdata:/var/lib/postgres/data
+    client-service:
+        build:
+            context: .
+            dockerfile: client-service/Dockerfile
+        ports:
+            - "3080:3080"
+            - "5005:5005"
+        depends_on:
+            - db
+        networks:
+            - client-service-network
+networks:
+    client-service-network:
+        driver: bridge
+volumes:
+    postgresdata:
+        external: true
