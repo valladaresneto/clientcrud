@@ -8,7 +8,6 @@ import br.com.company.client.clientservice.repository.ClientRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.core.ParameterizedTypeReference;
@@ -18,7 +17,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.HttpClientErrorException;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-@AutoConfigureRestDocs(outputDir = "target/snippets")
 class ClientsServiceControllerTest extends TestHelper {
 
 	@Autowired
