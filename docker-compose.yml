@@ -18,8 +18,7 @@ services:
             context: .
             dockerfile: client-service/Dockerfile
         ports:
-            - "3080:3080"
-            - "5005:5005"
+            - "5000:5000"
         depends_on:
             - db
         networks:

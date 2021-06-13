@@ -1,4 +1,4 @@
-POST http://localhost:3080/api/v1/login
+POST http://localhost:5000/api/v1/login
 Accept: application/json
 Content-Type: application/json
 
@@ -9,13 +9,19 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3080/api/v1/clients?page=0&size=2&sort=name
+GET http://localhost:5000/api/v1/clients?page=0&size=2&sort=name
 Accept: application/json
 Content-Type: application/json
 
 ###
 
-POST http://localhost:3080/api/v1/clients
+GET https://clients-service-101.herokuapp.com/api/v1/clients
+Accept: application/json
+Content-Type: application/json
+
+###
+
+POST https://clients-service-101.herokuapp.com/api/v1/clients
 Accept: application/json
 Content-Type: application/json
 
@@ -27,7 +33,7 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:3080/api/v1/clients
+PUT https://clients-service-101.herokuapp.com/api/v1/clients
 Accept: application/json
 Content-Type: application/json
 
@@ -40,3 +46,7 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3080/api/v1/swagger-ui-custom.html
+
+###
+
+GET https://clients-service-101.herokuapp.com/api/v1/swagger-ui-custom.html
