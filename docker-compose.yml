@@ -12,7 +12,7 @@ services:
         networks:
             - client-service-network
         volumes:
-            - ./postgresdata:/var/lib/postgres/data
+            - postgresdata:/var/lib/postgres/data
     client-service:
         build:
             context: .
@@ -29,4 +29,3 @@ networks:
         driver: bridge
 volumes:
     postgresdata:
-        external: true
