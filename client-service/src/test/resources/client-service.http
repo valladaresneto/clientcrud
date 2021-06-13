@@ -11,7 +11,7 @@ Content-Type: application/json
 ###
 
 #GET http://localhost:5000/api/v1/clients
-GET http://localhost:5000/api/v1/clients?page=0&size=2&sort=name
+GET http://clients-service-101.herokuapp.com/api/v1/clients?page=0&size=2&sort=name
 Accept: application/json
 Content-Type: application/json
 

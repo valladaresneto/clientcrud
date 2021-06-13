@@ -25,7 +25,8 @@ To run the project in the main directory run the following commands:
     - docker-compose up -d
 
 REST requests examples can be found in the file bellow:
- - client-service.http 
+ - client-service.http (Intellij Format)
+ - client-service.json (Postman Format)
 
 Deploy on Heroku:
  - heroku auth:token
