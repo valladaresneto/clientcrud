@@ -36,7 +36,7 @@ public class ClientsController {
     }
 
     @PutMapping
-    public Client update(@Valid @RequestBody Client client) {
-        return clientService.save(client);
+    public Client update(@RequestBody Client client) {
+        return clientService.update(client);
     }
 }
